@@ -129,18 +129,18 @@ function HeroSection() {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(60rem_40rem_at_50%_-10%,oklch(0.55_0.22_285/18%),transparent)]" />
-      <div className="mx-auto max-w-6xl px-6 py-24 text-center md:py-32">
+      <div className="mx-auto max-w-6xl px-6 py-32 text-center sm:py-40 md:py-48">
         <div className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
           <History className="size-3.5" />
           Version {SITE.version} · Windows & Linux
         </div>
-        <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
+        <h1 className="text-5xl font-bold tracking-tight sm:text-6xl md:text-7xl lg:text-8xl">
           One workspace for your day
         </h1>
-        <p className="mx-auto mt-5 max-w-2xl text-balance text-lg text-muted-foreground">
+        <p className="mx-auto mt-7 max-w-3xl text-balance text-xl leading-8 text-muted-foreground md:text-2xl md:leading-9">
           {SITE.tagline}
         </p>
-        <div className="mt-8 flex flex-wrap items-center justify-center gap-3">
+        <div className="mt-10 flex flex-wrap items-center justify-center gap-3">
           <Button asChild size="lg">
             <a href="#download">
               <Download />
