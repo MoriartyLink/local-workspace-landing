@@ -134,8 +134,9 @@ function HeroSection() {
           <History className="size-3.5" />
           Version {SITE.version} · Windows & Linux
         </div>
-        <h1 className="text-2xl font-bold tracking-tight sm:text-4xl md:text-5xl lg:text-4xl">
-          One workspace for your day
+        <h1 className="mx-auto max-w-2xl text-4xl font-bold tracking-tight text-balance sm:text-5xl md:text-6xl lg:text-7xl">
+          <span className="block">Your day, organized</span>
+          <span className="block">in one place</span>
         </h1>
         <p className="mx-auto mt-7 max-w-3xl text-balance text-xl leading-8 text-muted-foreground md:text-2xl md:leading-9">
           {SITE.tagline}
