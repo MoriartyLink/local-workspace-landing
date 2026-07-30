@@ -1,17 +1,17 @@
 import {
   BookOpen,
-  Cpu,
+  CalendarDays,
   Download,
   FolderKanban,
-  GitBranch,
   Github,
+  HardDrive,
+  History,
   Mail,
   Monitor,
   NotebookPen,
   Package,
   Search,
-  ShieldCheck,
-  TerminalSquare,
+  Users,
 } from "lucide-react"
 
 import { Button } from "@/components/ui/button"
@@ -26,9 +26,9 @@ import {
 const SITE = {
   appName: "Local Workspace",
   version: "1.0.3",
-  tagline: "One simple place to find, open, and manage every project on your computer.",
+  tagline: "Journal, plan projects, prepare meetings, and keep your work connected — all in a private Markdown vault.",
   logoSrc: "/logo.png",
-  videoSrc: "/local-workspace-demo1.mp4",
+  videoSrc: "/local-workspace-v1.0.3-demo.mp4",
   docsUrl: "https://github.com/MoriartyLink/local-workspace#readme",
   developer: {
     name: "MoriartyLink",
@@ -39,34 +39,34 @@ const SITE = {
 
 const FEATURES = [
   {
+    icon: NotebookPen,
+    title: "Daily journal",
+    description: "Reflect, track tasks, and record your physical and mental status each day.",
+  },
+  {
     icon: FolderKanban,
-    title: "All projects, one view",
-    description: "Add your project folders and open any workspace in seconds.",
+    title: "Project planning",
+    description: "Move work through Kanban boards and organize milestones, priorities, and tags.",
+  },
+  {
+    icon: CalendarDays,
+    title: "Better meetings",
+    description: "Keep agendas, minutes, and participants together, with optional Telegram reminders.",
+  },
+  {
+    icon: Users,
+    title: "People & ideas",
+    description: "Track contacts, relationships, and goals, then brainstorm on a visual whiteboard.",
   },
   {
     icon: Search,
-    title: "Quick search",
-    description: "Find the project you need without digging through folders.",
+    title: "Search & history",
+    description: "Search across your workspace and revisit completed tasks and milestones on a timeline.",
   },
   {
-    icon: TerminalSquare,
-    title: "Built-in terminal",
-    description: "Run project commands and follow their output inside the app.",
-  },
-  {
-    icon: GitBranch,
-    title: "Git at a glance",
-    description: "See your current branch and repository status as you work.",
-  },
-  {
-    icon: NotebookPen,
-    title: "Project notes",
-    description: "Keep useful notes and reminders beside each local project.",
-  },
-  {
-    icon: ShieldCheck,
-    title: "Local by default",
-    description: "Your projects and workspace data stay on your computer.",
+    icon: HardDrive,
+    title: "Your Markdown vault",
+    description: "Everything stays local as readable, portable, and Obsidian-compatible Markdown files.",
   },
 ]
 
@@ -130,17 +130,12 @@ function HeroSection() {
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(60rem_40rem_at_50%_-10%,oklch(0.55_0.22_285/18%),transparent)]" />
       <div className="mx-auto max-w-5xl px-6 py-24 text-center md:py-32">
-        <img
-          src={SITE.logoSrc}
-          alt=""
-          className="mx-auto mb-7 size-24 rounded-3xl shadow-2xl shadow-primary/20"
-        />
         <div className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
-          <Cpu className="size-3.5" />
+          <History className="size-3.5" />
           Version {SITE.version} · Windows & Linux
         </div>
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-          Your projects, ready when you are.
+          Your work, organized. Your data, yours.
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-balance text-lg text-muted-foreground">
           {SITE.tagline}
@@ -168,9 +163,9 @@ function FeaturesSection() {
   return (
     <section id="features" className="mx-auto max-w-5xl px-6 py-16">
       <div className="mb-10 text-center">
-        <h2 className="text-3xl font-bold tracking-tight">Everything close at hand</h2>
+        <h2 className="text-3xl font-bold tracking-tight">One workspace for your day</h2>
         <p className="mt-2 text-muted-foreground">
-          The essentials for moving between local projects without the clutter.
+          Plan, reflect, and stay connected without giving up control of your data.
         </p>
       </div>
       <div className="grid gap-5 sm:grid-cols-2 lg:grid-cols-3">
