@@ -100,7 +100,7 @@ const DOWNLOADS = [
 function Navbar() {
   return (
     <header className="sticky top-0 z-50 border-b bg-background/80 backdrop-blur">
-      <div className="mx-auto flex max-w-5xl items-center justify-between px-6 py-3">
+      <div className="flex w-full items-center justify-between px-5 py-3 sm:px-8 lg:px-12">
         <a href="#top" className="flex items-center gap-2 font-semibold">
           <img
             src={SITE.logoSrc}
@@ -117,7 +117,7 @@ function Navbar() {
         <Button asChild size="sm">
           <a href="#download">
             <Download />
-            Get v{SITE.version}
+            Download
           </a>
         </Button>
       </div>
@@ -129,13 +129,13 @@ function HeroSection() {
   return (
     <section className="relative overflow-hidden">
       <div className="absolute inset-0 -z-10 bg-[radial-gradient(60rem_40rem_at_50%_-10%,oklch(0.55_0.22_285/18%),transparent)]" />
-      <div className="mx-auto max-w-5xl px-6 py-24 text-center md:py-32">
+      <div className="mx-auto max-w-6xl px-6 py-24 text-center md:py-32">
         <div className="mx-auto mb-5 inline-flex items-center gap-2 rounded-full border bg-card px-3 py-1 text-xs font-medium text-muted-foreground">
           <History className="size-3.5" />
           Version {SITE.version} · Windows & Linux
         </div>
         <h1 className="text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl">
-          Your work, organized. Your data, yours.
+          One workspace for your day
         </h1>
         <p className="mx-auto mt-5 max-w-2xl text-balance text-lg text-muted-foreground">
           {SITE.tagline}
@@ -144,7 +144,7 @@ function HeroSection() {
           <Button asChild size="lg">
             <a href="#download">
               <Download />
-              Download v{SITE.version}
+              Download
             </a>
           </Button>
           <Button asChild size="lg" variant="outline">
@@ -161,9 +161,9 @@ function HeroSection() {
 
 function FeaturesSection() {
   return (
-    <section id="features" className="mx-auto max-w-5xl px-6 py-16">
+    <section id="features" className="mx-auto max-w-6xl px-6 py-16">
       <div className="mb-10 text-center">
-        <h2 className="text-3xl font-bold tracking-tight">One workspace for your day</h2>
+        <h2 className="text-3xl font-bold tracking-tight">Made for daily work</h2>
         <p className="mt-2 text-muted-foreground">
           Plan, reflect, and stay connected without giving up control of your data.
         </p>
@@ -189,7 +189,7 @@ function FeaturesSection() {
 
 function VideoSection() {
   return (
-    <section id="demo" className="mx-auto max-w-5xl px-6 py-16">
+    <section id="demo" className="mx-auto max-w-6xl px-6 py-16">
       <div className="mb-8 text-center">
         <h2 className="text-3xl font-bold tracking-tight">See it in action</h2>
         <p className="mt-2 text-muted-foreground">A quick look at Local Workspace.</p>
@@ -210,7 +210,7 @@ function VideoSection() {
 
 function DownloadSection() {
   return (
-    <section id="download" className="mx-auto max-w-5xl px-6 py-16">
+    <section id="download" className="mx-auto max-w-6xl px-6 py-16">
       <div className="mb-10 text-center">
         <h2 className="text-3xl font-bold tracking-tight">Download version {SITE.version}</h2>
         <p className="mt-2 text-muted-foreground">
@@ -247,7 +247,7 @@ function DownloadSection() {
 
 function ContactSection() {
   return (
-    <section className="mx-auto max-w-5xl px-6 py-16">
+    <section className="mx-auto max-w-6xl px-6 py-16">
       <Card>
         <CardHeader>
           <CardTitle className="text-2xl">Questions or feedback?</CardTitle>
@@ -277,7 +277,7 @@ function ContactSection() {
 function Footer() {
   return (
     <footer className="border-t">
-      <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-3 px-6 py-8 text-sm text-muted-foreground sm:flex-row">
+      <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 py-8 text-sm text-muted-foreground sm:flex-row">
         <p>© {new Date().getFullYear()} {SITE.appName} · Version {SITE.version}</p>
         <p>
           Built by{" "}
